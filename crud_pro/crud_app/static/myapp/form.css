@@ -1,0 +1,111 @@
+/* Body and background */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+}
+
+/* Form box */
+.form-box {
+    background: #fff;
+    border-radius: 12px;
+    padding: 40px 30px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+/* Heading */
+.form-box h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Input group */
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+/* Input fields */
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    background: none;
+    transition: all 0.3s ease;
+}
+
+/* Floating label */
+.input-group label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    color: #999;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: 0.3s ease;
+    background: #fff;
+    padding: 0 5px;
+}
+
+/* Move label when input is focused or filled */
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 10px;
+    font-size: 12px;
+    color: #667eea;
+}
+
+/* Input focus effect */
+.input-group input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+}
+
+/* Submit button */
+button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: #667eea;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: #5a67d8;
+}
+
+/* Success message */
+.success-msg {
+    text-align: center;
+    color: green;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .form-box {
+        padding: 30px 20px;
+    }
+}
