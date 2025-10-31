@@ -7,5 +7,3 @@ class Faculty(models.Model):
     l_name=models.CharField(max_length=50)
     mail=models.CharField(max_length=50)
     branch=models.CharField(max_length=40)
-    def __str__(self):
-        return self.f_name + " " + self.l_name
