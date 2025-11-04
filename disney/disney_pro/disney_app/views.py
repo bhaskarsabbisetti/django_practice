@@ -48,8 +48,9 @@ def register(req):
     return JsonResponse({"msg":"register successful"})
 @csrf_exempt
 def registeration(req):
-    user_name=req.POST.get("name")
-    user_age=req.POST.get("age")
+    data=json.loads(req.body)
+    user_name=data.get("name")
+    user_age=data.get("age")
     coder=Coders.objects.create(name=user_name,age=user_age)
     coder.save
     return HttpResponse("successfully posted")
